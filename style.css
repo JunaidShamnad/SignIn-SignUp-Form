@@ -19,6 +19,18 @@ body, input{
     overflow: hidden;
 }
 
+.container::before{
+    content: '';
+    position: absolute;
+    width: 2000px;
+    height: 2000px;
+    border-radius: 50%;
+    background: linear-gradient(-45deg ,#4481eb,#04befe);
+    top: -10%;
+    right: 48%;
+    transform: translateY(-50%);
+}
+
 .forms-container{
     position: absolute;
     width: 100%;
@@ -27,11 +39,34 @@ body, input{
     left: 0;
 }
 
+.signin-signup{
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50% ,-50%);
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
 form{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding: 0 5rem;
+    overflow: hidden;
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+form.sign-in-form{
+    z-index: 2;
+}
+
+form.sign-up-form{
+    z-index: 2;
+    opacity: 0;
 }
 
 .title{
