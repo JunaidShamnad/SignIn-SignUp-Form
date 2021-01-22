@@ -30,6 +30,7 @@ body, input{
     right: 48%;
     transform: translateY(-50%);
     z-index: 6;
+    transition: 1.8s ease-in-out;
 }
 
 .forms-container{
@@ -221,3 +222,7 @@ form.sign-up-form{
 .right-panel .content,.right-panel .image{
     transform: translateX(800px);
 }
+
+/* Aimation */
+
+.container
